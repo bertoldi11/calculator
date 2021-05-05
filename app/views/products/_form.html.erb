@@ -28,6 +28,13 @@
     <% end %>
   </div>
   <div>
+    <%= form.label :type_id %></br>
+    <%= form.text_field :type_id %>
+    <% @product.errors.full_messages_for(:type_id).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
